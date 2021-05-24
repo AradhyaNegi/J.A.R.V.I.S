@@ -30,7 +30,9 @@ with speech.Microphone() as source:
 
 
     zx = {'The time is:' , '%H:%M:%S' , 'Here are some clinics nearby:-' , 'https://www.google.com/search?q=doctors+near+me&source=hp&ei=zSCeYM7LNt6H4-EPrpWv6Ak&iflsig=AINFCbYAAAAAYJ4u3b1m6yl5YZglXzNhCoeK2dJqyuZT&oq=doctors+&gs_lcp=Cgdnd3Mtd2l6EAEYADIICAAQsQMQyQMyBQgAEJIDMgUIABCxAzIFCC4QsQMyBQgAELEDMggIABCxAxCDATIFCAAQsQMyCAguEMcBEK8BMggIABCxAxCDATICCAA6CwguELEDEMcBEKMCOggILhCxAxCDAToCCC5QrgZYjh1gvC1oAHAAeACAAcQBiAGJC5IBAzAuOJgBAKABAaoBB2d3cy13aXo&sclient=gws-wiz'
-          'Opening Youtube :' , 'https://www.youtube.com/'}
+         
+          'Opening Youtube :' , 'https://www.youtube.com/' , 'opening Google' , 'https://www.google.com/'
+          'Opening times of India for latest news :' , 'https://timesofindia.indiatimes.com/defaultinterstitial.cms'}
     
     if 'time' in command :
         engine.say(zx[0])
@@ -70,6 +72,15 @@ with speech.Microphone() as source:
         engine.runAndWait()
         webbrowser.open(zx[5])
         
+    if 'google' in command :
+        engine.say(zx[6])
+        engine.runAndWait()
+        webbrowser.open(zx[7])
+        
+    if 'news' in command :
+        engine.say(zx[8])
+        engine.runAndWait()
+        webbrowser.open(zx[9])
     
      
 
